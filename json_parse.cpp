@@ -63,6 +63,7 @@ std::shared_ptr<JsonElement> JsonParse::ParseObject(const std::string& json, con
 				
 				nPair++;
 				i = e1;
+				bBasic = true;
 			}
 			else if (JsonUtils::IsNumber(json[i]))			// number
 			{
@@ -78,6 +79,7 @@ std::shared_ptr<JsonElement> JsonParse::ParseObject(const std::string& json, con
 
 				nPair++;
 				i = e;
+				bBasic = true;
 			}
 			else if (json[i] == 'T' || json[i] == 't' || json[i] == 'F' || json[i] == 'f') // boolean
 			{
@@ -92,6 +94,7 @@ std::shared_ptr<JsonElement> JsonParse::ParseObject(const std::string& json, con
 
 				nPair++;
 				i = e;
+				bBasic = true;
 			}
 			else if (json[i] == 'N' || json[i] == 'n')	// null
 			{
@@ -105,6 +108,7 @@ std::shared_ptr<JsonElement> JsonParse::ParseObject(const std::string& json, con
 
 				nPair++;
 				i = e;
+				bBasic = true;
 			}
 			else if (json[i] == '{')	// object
 			{

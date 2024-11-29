@@ -46,7 +46,7 @@ INT CShowJsonView::OnCreate(LPCREATESTRUCT lpcs)
 	m_menu.LoadMenu(ID_LIST_VIEW_MENU);
 
 	// create image list
-	m_imgList.Create(32, 32, ILC_COLOR, 0, 1);
+	m_imgList.Create(24, 24, ILC_COLOR, 0, 1);
 	for (int i = 0; i < sizeof(nImgIDs) / sizeof(UINT); i++)
 	{
 		m_imgList.Add(AfxGetApp()->LoadIcon(nImgIDs[i]));
