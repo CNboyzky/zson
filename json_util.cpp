@@ -102,6 +102,7 @@ size_t JsonUtils::LocateAtStringEnding(const std::string& str, size_t start, std
 		}
 		else // normal characters
 		{
+			for (int i = 0; i < continuousSlash / 2; i++) outVal.push_back('\\');
 			outVal.push_back(str[pos]);
 		}
 		continuousSlash = 0;	// reset continuousSlash to 0
